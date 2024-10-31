@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./assets/e-learning-logo.png"
+      type="image/x-icon"
+    />
+    <title>ETEC.E-Learning</title>
+
+    <!-- link css -->
+    <link rel="stylesheet" href="./style/style.css" />
+    <!-- -------------- -->
+
+    <!-- link bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <!-- -------------- -->
+
+    <!-- other link -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- -------------- -->
+  </head>
+  <body>
+    <div class="container-fluid p-0">
+      <!-- modal login -->
+      <div class="modal fade" id="exampleModal">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body py-5">
+              <h1 class="text-center txt-font">Sign in</h1>
+              <!-- Social app -->
+              <div class="d-flex justify-content-center mt-4">
+                <div
+                  class="rounded-circle bg-secondary-subtle mx-2 d-flex align-items-center justify-content-center"
+                  style="width: 60px; height: 60px"
+                >
+                  <a href="" class="fs-3 text-dark">
+                    <i class="bi bi-facebook"></i>
+                  </a>
+                </div>
+                <div
+                  class="rounded-circle bg-secondary-subtle mx-2 d-flex align-items-center justify-content-center"
+                  style="width: 60px; height: 60px"
+                >
+                  <a href="" class="fs-3 text-dark">
+                    <i class="bi bi-whatsapp"></i>
+                  </a>
+                </div>
+                <div
+                  class="rounded-circle bg-secondary-subtle mx-2 d-flex align-items-center justify-content-center"
+                  style="width: 60px; height: 60px"
+                >
+                  <a href="" class="fs-3 text-dark">
+                    <i class="bi bi-tiktok"></i>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Field input -->
+              <div class="px-2 mt-3">
+                <form action="" class="text-center">
+                  <p class="m-0">or use you account</p>
+                  <input
+                    type="email"
+                    class="form-control bg-secondary-subtle shadow-none my-2 rounded-0 py-3 border-0"
+                    placeholder="Email"
+                    required
+                  />
+                  <input
+                    type="password"
+                    class="form-control bg-secondary-subtle shadow-none my-2 rounded-0 py-3 border-0"
+                    placeholder="Password"
+                    required
+                  />
+                  <a href="" class="my-2 text-dark text-decoration-none"
+                    >Forgot your password?</a
+                  >
+                  <br />
+                  <button
+                    class="btn bg-primary text-uppercase rounded-5 my-3 px-5 text-light"
+                  >
+                    sign in
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <nav id="nav" class="navbar fixed-top">
+        <!-- nav content -->
+        <div class="container">
+          <!-- left navbar -->
+          <button class="btn border-0 d-block d-lg-none">
+            <a href=""> <i class="bi bi-envelope-fill fs-2 text-light"></i></a>
+          </button>
+
+          <div class="d-flex align-items-center">
+            <a href="" class="logo-font navbar-brand text-light fs-4">
+              ETEC.center
+            </a>
+
+            <div class="d-none d-lg-block">
+              <ul class="nav">
+                <li>
+                  <a href="" class="txt-font nav-link text-light">Home</a>
+                </li>
+                <li>
+                  <a href="#about" class="txt-font nav-link text-light"
+                    >About</a
+                  >
+                </li>
+                <li>
+                  <a href="" class="txt-font nav-link text-light">Course</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <button
+            class="btn border-0 d-block d-lg-none"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#sideMenu"
+          >
+            <i class="bi bi-list text-light fs-2"></i>
+          </button>
+
+          <!-- right navbar -->
+          <div class="d-none d-lg-flex align-items-center txt-font">
+            <span class="text-light fw-bold border-end pe-1 me-2"
+              >+855 10-999-888</span
+            >
+            <button
+              class="rounded-0 btn text-light"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              Login
+            </button>
+            <button class="rounded-0 btn btn-light">Register</button>
+          </div>
+        </div>
+      </nav>
+
+      <!-- offcanvas -->
+      <div class="offcanvas offcanvas-end" id="sideMenu">
+        <div class="offcanvas-header border-bottom">
+          <a href="" class="logo-font navbar-brand text-dark fs-4">
+            ETEC.center
+          </a>
+          <button
+            class="btn-close shadow-none"
+            data-bs-dismiss="offcanvas"
+          ></button>
+        </div>
+        <div class="offcanvas-body p-0">
+          <!-- user-profile -->
+          <div class="d-flex p-3">
+            <div
+              class="rounded-circle overflow-hidden border-darkblue"
+              style="width: 60px; height: 60px"
+            >
+              <img
+                class="w-100 h-100 object-fit-cover"
+                src="https://uploads.dailydot.com/2024/07/side-eye-cat.jpg?q=65&auto=format&w=1600&ar=2:1&fit=crop"
+                alt=""
+              />
+            </div>
+            <div class="txt-font ms-2">
+              <h4 class="m-0">User Name</h4>
+              <p class="m-0">user</p>
+            </div>
+          </div>
+
+          <!-- menu -->
+          <ul class="list-unstyled txt-font">
+            <li class="py-2 px-3 border-bottom">
+              <a href="" class="nav-link">Home</a>
+            </li>
+            <li class="py-2 px-3 border-bottom">
+              <a href="" class="nav-link">About</a>
+            </li>
+            <li
+              class="py-2 px-3 border-bottom"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse-data"
+            >
+              <div class="d-flex justify-content-between">
+                <a href="" class="nav-link">Course</a>
+                <i class="bi bi-caret-down-fill"></i>
+              </div>
+              <div class="collapse" id="collapse-data">
+                <ul class="list-unstyled mt-2">
+                  <li class="py-2">Front-end</li>
+                  <li class="py-2">Back-end</li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <div class="txt-font p-3">
+            <p class="text-dark fw-bold pe-1 me-2">+855 10-999-888</p>
+            <button
+              class="rounded-0 btn text-dark mt-2"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              Login
+            </button>
+            <button class="rounded-0 btn bg-dark-blue text-light">
+              Register
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <main>
+        <!-- main content -->
+        <div class="hero container-fluid p-0 bg-danger">
+          <div id="silde" class="carousel slide w-100 h-100">
+            <div class="carousel-indicators">
+              <button
+                style="width: 15px; height: 15px"
+                type="button"
+                class="rounded-circle active"
+                data-bs-target="#silde"
+                data-bs-slide-to="0"
+              ></button>
+              <button
+                style="width: 15px; height: 15px"
+                type="button"
+                class="rounded-circle"
+                data-bs-target="#silde"
+                data-bs-slide-to="1"
+              ></button>
+              <button
+                style="width: 15px; height: 15px"
+                type="button"
+                class="rounded-circle"
+                data-bs-target="#silde"
+                data-bs-slide-to="2"
+              ></button>
+            </div>
+            <div class="carousel-inner w-100 h-100">
+              <div class="carousel-item active w-100 h-100 position-relative">
+                <div
+                  class="txt-font col-10 col-md-8 col-lg-6 text-center position-absolute z-2 top-50 start-50 translate-middle text-light"
+                >
+                  <h1 class="animate__animated animate__zoomIn">
+                    Build a Web-appliction and mobile-app
+                  </h1>
+                  <p class="animate__animated animate__zoomIn mx-auto col-md-7">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nemo delectus ipsum nisi incidunt corporis doloribus
+                    blanditiis sunt hic illo maxime.
+                  </p>
+                  <button class="bg-success btn text-light">Learn more</button>
+                </div>
+                <img
+                  style="filter: brightness(30%)"
+                  class="d-block w-100 h-100 object-fit-cover"
+                  src="https://f.hubspotusercontent10.net/hubfs/6448316/applications-of-computer-programming.jpg"
+                />
+              </div>
+              <div class="carousel-item w-100 h-100 position-relative">
+                <div
+                  class="txt-font col-10 col-md-8 col-lg-6 text-center position-absolute z-2 top-50 start-50 translate-middle text-light"
+                >
+                  <h1 class="animate__animated animate__zoomIn">
+                    Graphic Desgin and UX/UI
+                  </h1>
+                  <p class="animate__animated animate__zoomIn mx-auto col-md-7">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nemo delectus ipsum nisi incidunt corporis doloribus
+                    blanditiis sunt hic illo maxime.
+                  </p>
+                  <button class="bg-success btn text-light">Learn more</button>
+                </div>
+                <img
+                  style="filter: brightness(50%)"
+                  class="d-block w-100 h-100 object-fit-cover"
+                  src="https://pixel77.com/wp-content/uploads/2018/10/1934823-e1540532501723.jpg"
+                />
+              </div>
+              <div class="carousel-item w-100 h-100 position-relative">
+                <div
+                  class="txt-font col-10 col-md-8 col-lg-6 text-center position-absolute z-2 top-50 start-50 translate-middle text-light"
+                >
+                  <h1 class="animate__animated animate__zoomIn">
+                    Netword and configuration
+                  </h1>
+                  <p class="animate__animated animate__zoomIn mx-auto col-md-7">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nemo delectus ipsum nisi incidunt corporis doloribus
+                    blanditiis sunt hic illo maxime.
+                  </p>
+                  <button class="bg-success btn text-light">Learn more</button>
+                </div>
+                <img
+                  style="filter: brightness(50%)"
+                  class="d-block w-100 h-100 object-fit-cover"
+                  src="https://em360tech.com/sites/default/files/inline-images/types-of-computer-networks.jpeg"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- our-school -->
+        <div class="container-fluid p-0 my-4">
+          <div class="container p-0" id="about">
+            <div class="row m-0">
+              <div
+                class="col-6 col-lg-3 p-3 p-md-4"
+                data-aos="zoom-in"
+                data-aos-delay="100"
+              >
+                <div class="card shadow h-100 p-3 txt-font rounded-0">
+                  <img src="./assets/web-image.png" alt="" width="60px" />
+                  <h5 class="mt-2 mb-0">Website</h5>
+                  <p class="text-limit text-secondary">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Natus laboriosam eos laudantium voluptas, soluta, dicta
+                    dolor quis fugiat blanditiis, quisquam officia voluptatibus
+                    quibusdam asperiores magnam mollitia a consequuntur velit
+                    beatae?
+                  </p>
+                </div>
+              </div>
+              <div
+                class="col-6 col-lg-3 p-3 p-md-4"
+                data-aos="zoom-in"
+                data-aos-delay="150"
+              >
+                <div class="card shadow h-100 p-3 txt-font rounded-0">
+                  <img src="./assets/app-image.png" alt="" width="60px" />
+                  <h5 class="mt-2 mb-0">Appilcation</h5>
+                  <p class="text-limit text-secondary">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Natus laboriosam eos laudantium voluptas, soluta, dicta
+                    dolor quis fugiat blanditiis, quisquam officia voluptatibus
+                    quibusdam asperiores magnam mollitia a consequuntur velit
+                    beatae?
+                  </p>
+                </div>
+              </div>
+              <div
+                class="col-6 col-lg-3 p-3 p-md-4"
+                data-aos="zoom-in"
+                data-aos-delay="200"
+              >
+                <div class="card shadow h-100 p-3 txt-font rounded-0">
+                  <img src="./assets/netword-image.png" alt="" width="60px" />
+                  <h5 class="mt-2 mb-0">Network</h5>
+                  <p class="text-limit text-secondary">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Natus laboriosam eos laudantium voluptas, soluta, dicta
+                    dolor quis fugiat blanditiis, quisquam officia voluptatibus
+                    quibusdam asperiores magnam mollitia a consequuntur velit
+                    beatae?
+                  </p>
+                </div>
+              </div>
+              <div
+                class="col-6 col-lg-3 p-3 p-md-4"
+                data-aos="zoom-in"
+                data-aos-delay="250"
+              >
+                <div class="card shadow h-100 p-3 txt-font rounded-0">
+                  <img src="./assets/design.png" alt="" width="60px" />
+                  <h5 class="mt-2 mb-0">Design</h5>
+                  <p class="text-limit text-secondary">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Natus laboriosam eos laudantium voluptas, soluta, dicta
+                    dolor quis fugiat blanditiis, quisquam officia voluptatibus
+                    quibusdam asperiores magnam mollitia a consequuntur velit
+                    beatae?
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- discount-course -->
+        <div
+          class="container-fluid py-5 bg-dark-blue"
+          data-aos="fade-up"
+          data-aos-duration="400"
+        >
+          <div class="container">
+            <div class="text-light txt-font col-md-6 p-0 p-md-3">
+              <h3>Descount course</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+                nobis fugiat laborum, accusantium harum, natus quos, similique
+                earum omnis tempora doloremque officia id at! Voluptatem eaque
+                nesciunt at labore repudiandae?
+              </p>
+              <button class="btn bg-success text-light px-4 shadow">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course-available -->
+        <div class="container-fluid p-0 py-5">
+          <div class="container txt-font">
+            <h2 class="ps-0 ps-md-3" data-aos="fade-up">Course Available</h2>
+            <div class="row m-0">
+              <div
+                class="col-6 col-md-4 col-lg-3 p-1 p-md-3"
+                data-aos="zoom-in"
+                data-aos-delay="100"
+              >
+                <div class="card p-2 p-md-3 shadow rounded-0">
+                  <div class="image bg-black">
+                    <img
+                      src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20230703144619/CPP-Language.png"
+                      alt=""
+                      class="w-100 h-100 object-fit-cover"
+                    />
+                  </div>
+                  <div class="card-body p-0 mt-3">
+                    <h3>Tutorial C++</h3>
+                    <div class="d-flex">
+                      <i class="bi bi-star-fill text-warning me-1"></i>
+                      <i class="bi bi-star-fill text-warning me-1"></i>
+                      <i class="bi bi-star-fill text-warning me-1"></i>
+                      <i class="bi bi-star-fill text-warning me-1"></i>
+                      <i class="bi bi-star-fill"></i>
+                    </div>
+                    <h4 class="text-danger">$49</h4>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="col-6 col-md-4 col-lg-3 p-1 p-md-3"
+                data-aos="zoom-in"
+                data-aos-delay="150"
+              >
+                <div class="card p-2 p-md-3 shadow rounded-0">
+                  <div class="image bg-black">
+                    <img
+                      src="https://media.digitalnomads.world/wp-content/uploads/2021/01/20120720/csharp-e1610370637835-1024x576.jpg"
+                      alt=""
+                      class="w-100 h-100 object-fit-cover"
+                    />
+                  </div>
+                  <div class="card-body p-0 mt-3">
+                    <h3>Tutorial C#</h3>
+                    <div class="d-flex">
+                      <i class="bi bi-star-fill text-warning me-1"></i>
+                      <i class="bi bi-star-fill text-warning me-1"></i>
+                      <i class="bi bi-star-fill text-warning me-1"></i>
+                      <i class="bi bi-star-fill text-warning me-1"></i>
+                      <i class="bi bi-star-fill"></i>
+                    </div>
+                    <h4 class="text-danger">$89</h4>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="col-6 col-md-4 col-lg-3 p-1 p-md-3"
+                data-aos="zoom-in"
+                data-aos-delay="200"
+              >
+                <div class="card p-2 p-md-3 shadow rounded-0">
+                  <div class="image bg-black">
+                    <img
+                      src="https://hermes.dio.me/articles/cover/8baa0855-4bd5-4abf-a007-48527a7c5859.png"
+                      alt=""
+                      class="w-100 h-100 object-fit-cover"
+                    />
+                  </div>
+                  <div class="card-body p-0 mt-3">
+                    <h3>Web Design</h3>
+                    <div class="d-flex">
+                      <i class="bi bi-star-fill text-warning me-1"></i>
+                      <i class="bi bi-star-fill text-warning me-1"></i>
+                      <i class="bi bi-star-fill text-warning me-1"></i>
+                      <i class="bi bi-star-fill text-warning me-1"></i>
+                      <i class="bi bi-star-fill"></i>
+                    </div>
+                    <h4 class="text-danger">$79</h4>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="col-6 col-md-4 col-lg-3 p-1 p-md-3"
+                data-aos="zoom-in"
+                data-aos-delay="250"
+              >
+                <div class="card p-2 p-md-3 shadow rounded-0">
+                  <div class="image bg-black">
+                    <img
+                      src="https://www.weblineindia.com/wp-content/uploads/2022/03/what-why-when-to-use-reactjs.jpg"
+                      alt=""
+                      class="w-100 h-100 object-fit-cover"
+                    />
+                  </div>
+                  <div class="card-body p-0 mt-3">
+                    <h3>React.js</h3>
+                    <div class="d-flex">
+                      <i class="bi bi-star-fill text-warning me-1"></i>
+                      <i class="bi bi-star-fill text-warning me-1"></i>
+                      <i class="bi bi-star-fill text-warning me-1"></i>
+                      <i class="bi bi-star-fill text-warning me-1"></i>
+                      <i class="bi bi-star-fill"></i>
+                    </div>
+                    <h4 class="text-danger">$49</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Promotion-course -->
+        <div
+          class="container-fluid py-5 bg-dark-blue"
+          data-aos="fade-up"
+          data-aos-duration="400"
+        >
+          <div class="container d-flex justify-content-md-end">
+            <div class="text-light txt-font col-md-6 p-0 p-md-3">
+              <h3>Promotion course</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+                nobis fugiat laborum, accusantium harum, natus quos, similique
+                earum omnis tempora doloremque officia id at! Voluptatem eaque
+                nesciunt at labore repudiandae?
+              </p>
+              <button class="btn bg-success text-light px-4 shadow">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course-promotion -->
+        <div class="container-fluid p-0 py-5">
+          <div class="container txt-font">
+            <h2 class="ps-0 ps-md-3" data-aos="fade-up">Promotion Course</h2>
+            <div class="row m-0">
+              <div
+                class="col-6 col-md-4 col-lg-3 p-1 p-md-3"
+                data-aos="zoom-in"
+                data-aos-delay="100"
+              >
+                <div class="card p-2 p-md-3 shadow rounded-0">
+                  <div class="image bg-black">
+                    <img
+                      src="https://blog-frontend.envato.com/cdn-cgi/image/width=1200,quality=75,format=auto,fit=crop,height=630/uploads/sites/2/2022/05/graphic-design-tools.png"
+                      alt=""
+                      class="w-100 h-100 object-fit-cover"
+                    />
+                  </div>
+                  <div class="card-body p-0 mt-3">
+                    <h3>Design</h3>
+                    <div class="d-flex">
+                      <i class="bi bi-star-fill text-warning me-1"></i>
+                      <i class="bi bi-star-fill text-warning me-1"></i>
+                      <i class="bi bi-star-fill text-warning me-1"></i>
+                      <i class="bi bi-star-fill text-warning me-1"></i>
+                      <i class="bi bi-star-fill"></i>
+                    </div>
+                    <h4 class="text-danger">$59 + Figma</h4>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="col-6 col-md-4 col-lg-3 p-1 p-md-3"
+                data-aos="zoom-in"
+                data-aos-delay="150"
+              >
+                <div class="card p-2 p-md-3 shadow rounded-0">
+                  <div class="image bg-black">
+                    <img
+                      src="https://www.cisco.com/c/dam/assets/swa/img/anchor-info/what-is-network-infrastructure-info-628x353.jpg"
+                      alt=""
+                      class="w-100 h-100 object-fit-cover"
+                    />
+                  </div>
+                  <div class="card-body p-0 mt-3">
+                    <h3>Netword</h3>
+                    <div class="d-flex">
+                      <i class="bi bi-star-fill text-warning me-1"></i>
+                      <i class="bi bi-star-fill text-warning me-1"></i>
+                      <i class="bi bi-star-fill text-warning me-1"></i>
+                      <i class="bi bi-star-fill text-warning me-1"></i>
+                      <i class="bi bi-star-fill"></i>
+                    </div>
+                    <h4 class="text-danger">$89 + Cyber</h4>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="col-6 col-md-4 col-lg-3 p-1 p-md-3"
+                data-aos="zoom-in"
+                data-aos-delay="200"
+              >
+                <div class="card p-2 p-md-3 shadow rounded-0">
+                  <div class="image bg-black">
+                    <img
+                      src="https://hermes.dio.me/articles/cover/8baa0855-4bd5-4abf-a007-48527a7c5859.png"
+                      alt=""
+                      class="w-100 h-100 object-fit-cover"
+                    />
+                  </div>
+                  <div class="card-body p-0 mt-3">
+                    <h3>Web Design</h3>
+                    <div class="d-flex">
+                      <i class="bi bi-star-fill text-warning me-1"></i>
+                      <i class="bi bi-star-fill text-warning me-1"></i>
+                      <i class="bi bi-star-fill text-warning me-1"></i>
+                      <i class="bi bi-star-fill text-warning me-1"></i>
+                      <i class="bi bi-star-fill"></i>
+                    </div>
+                    <h4 class="text-danger">$79 + Vue.js</h4>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="col-6 col-md-4 col-lg-3 p-1 p-md-3"
+                data-aos="zoom-in"
+                data-aos-delay="250"
+              >
+                <div class="card p-2 p-md-3 shadow rounded-0">
+                  <div class="image bg-black">
+                    <img
+                      src="https://www.weblineindia.com/wp-content/uploads/2022/03/what-why-when-to-use-reactjs.jpg"
+                      alt=""
+                      class="w-100 h-100 object-fit-cover"
+                    />
+                  </div>
+                  <div class="card-body p-0 mt-3">
+                    <h3>React.js</h3>
+                    <div class="d-flex">
+                      <i class="bi bi-star-fill text-warning me-1"></i>
+                      <i class="bi bi-star-fill text-warning me-1"></i>
+                      <i class="bi bi-star-fill text-warning me-1"></i>
+                      <i class="bi bi-star-fill text-warning me-1"></i>
+                      <i class="bi bi-star-fill"></i>
+                    </div>
+                    <h4 class="text-danger">$49</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- instructor-course -->
+        <div
+          class="container-fluid bg-dark-blue"
+          data-aos="fade-up"
+          data-aos-duration="400"
+        >
+          <div id="carouselExampleCaptions" class="carousel slide py-5">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="col-11 col-md-5 text-light m-auto text-center">
+                  <h1 class="fw-bold">"</h1>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quae, harum! Harum atque ducimus repellendus magni
+                    distinctio, accusantium corrupti officiis odio fugiat? Error
+                    quia, culpa eveniet cumque nostrum esse corporis sed.
+                  </p>
+                  <div
+                    style="width: 60px; height: 60px"
+                    class="rounded-circle bg-secondary m-auto overflow-hidden"
+                  >
+                    <img
+                      src="https://uploads.dailydot.com/2018/10/olli-the-polite-cat.jpg?auto=compress&fm=pjpg"
+                      alt=""
+                      class="w-100 h-100 object-fit-cover"
+                    />
+                  </div>
+                  <p class="fw-bold m-0">User Name</p>
+                  <p>Web Developer</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col-11 col-md-5 text-light m-auto text-center">
+                  <h1 class="fw-bold">"</h1>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quae, harum! Harum atque ducimus repellendus magni
+                    distinctio, accusantium corrupti officiis odio fugiat? Error
+                    quia, culpa eveniet cumque nostrum esse corporis sed.
+                  </p>
+                  <div
+                    style="width: 60px; height: 60px"
+                    class="rounded-circle bg-secondary m-auto overflow-hidden"
+                  >
+                    <img src="" alt="" />
+                  </div>
+                  <p class="fw-bold m-0">User Name</p>
+                  <p>Web Developer</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col-11 col-md-5 text-light m-auto text-center">
+                  <h1 class="fw-bold">"</h1>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quae, harum! Harum atque ducimus repellendus magni
+                    distinctio, accusantium corrupti officiis odio fugiat? Error
+                    quia, culpa eveniet cumque nostrum esse corporis sed.
+                  </p>
+                  <div
+                    style="width: 60px; height: 60px"
+                    class="rounded-circle bg-secondary m-auto overflow-hidden"
+                  >
+                    <img src="" alt="" />
+                  </div>
+                  <p class="fw-bold m-0">User Name</p>
+                  <p>Web Developer</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-center carousel-indicators">
+              <button
+                style="width: 15px; height: 15px"
+                type="button"
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide-to="0"
+                class="active rounded-circle"
+              ></button>
+              <button
+                style="width: 15px; height: 15px"
+                type="button"
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide-to="1"
+                class="rounded-circle"
+              ></button>
+              <button
+                style="width: 15px; height: 15px"
+                type="button"
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide-to="2"
+                class="rounded-circle"
+              ></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Latest News -->
+        <div class="container-fluid p-0 py-5">
+          <div class="container txt-font">
+            <h2 class="ps-0 ps-md-3" data-aos="fade-up">Latest News</h2>
+            <div class="row m-0">
+              <div
+                class="col-6 col-md-4 col-lg-3 p-1 p-md-3"
+                data-aos="zoom-in"
+                data-aos-delay="100"
+              >
+                <div class="card p-2 p-md-3 border border-0 rounded-0">
+                  <div class="image bg-black">
+                    <img
+                      src="https://blog-frontend.envato.com/cdn-cgi/image/width=1200,quality=75,format=auto,fit=crop,height=630/uploads/sites/2/2022/05/graphic-design-tools.png"
+                      alt=""
+                      class="w-100 h-100 object-fit-cover"
+                    />
+                  </div>
+                  <div class="card-body p-0 mt-3">
+                    <p class="text-limit text-secondary">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Architecto voluptates eveniet earum dolorum dicta illum ut
+                      sequi distinctio quaerat, saepe sapiente natus officiis
+                      cum nam itaque, dolorem tempora doloremque neque?
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="col-6 col-md-4 col-lg-3 p-1 p-md-3"
+                data-aos="zoom-in"
+                data-aos-delay="150"
+              >
+                <div class="card p-2 p-md-3 border border-0 rounded-0">
+                  <div class="image bg-black">
+                    <img
+                      src="https://www.cisco.com/c/dam/assets/swa/img/anchor-info/what-is-network-infrastructure-info-628x353.jpg"
+                      alt=""
+                      class="w-100 h-100 object-fit-cover"
+                    />
+                  </div>
+                  <div class="card-body p-0 mt-3">
+                    <p class="text-limit text-secondary">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Architecto voluptates eveniet earum dolorum dicta illum ut
+                      sequi distinctio quaerat, saepe sapiente natus officiis
+                      cum nam itaque, dolorem tempora doloremque neque?
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="col-6 col-md-4 col-lg-3 p-1 p-md-3"
+                data-aos="zoom-in"
+                data-aos-delay="200"
+              >
+                <div class="card p-2 p-md-3 border border-0 rounded-0">
+                  <div class="image bg-black">
+                    <img
+                      src="https://hermes.dio.me/articles/cover/8baa0855-4bd5-4abf-a007-48527a7c5859.png"
+                      alt=""
+                      class="w-100 h-100 object-fit-cover"
+                    />
+                  </div>
+                  <div class="card-body p-0 mt-3">
+                    <p class="text-limit text-secondary">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Architecto voluptates eveniet earum dolorum dicta illum ut
+                      sequi distinctio quaerat, saepe sapiente natus officiis
+                      cum nam itaque, dolorem tempora doloremque neque?
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="col-6 col-md-4 col-lg-3 p-1 p-md-3"
+                data-aos="zoom-in"
+                data-aos-delay="250"
+              >
+                <div class="card p-2 p-md-3 border border-0 rounded-0">
+                  <div class="image bg-black">
+                    <img
+                      src="https://www.weblineindia.com/wp-content/uploads/2022/03/what-why-when-to-use-reactjs.jpg"
+                      alt=""
+                      class="w-100 h-100 object-fit-cover"
+                    />
+                  </div>
+                  <div class="card-body p-0 mt-3">
+                    <p class="text-limit text-secondary">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Architecto voluptates eveniet earum dolorum dicta illum ut
+                      sequi distinctio quaerat, saepe sapiente natus officiis
+                      cum nam itaque, dolorem tempora doloremque neque?
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        <div class="foot container-fluid py-5 text-center text-light txt-font">
+          <h3>Find & follow us</h3>
+          <ul class="mt-3 list-unstyled d-flex justify-content-center">
+            <li>
+              <a href="#" class="text-light fs-3 px-2">
+                <i class="bi bi-facebook"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="text-light fs-3 px-2">
+                <i class="bi bi-tiktok"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="text-light fs-3 px-2">
+                <i class="bi bi-whatsapp"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="text-light fs-3 px-2">
+                <i class="bi bi-telegram"></i>
+              </a>
+            </li>
+          </ul>
+          <p class="m-0">Email: etec.info@yahoo.com</p>
+          <p class="m-0">Address: street 2002, Phnom Penh, Cambodia</p>
+          <!-- <hr> -->
+          <p>Copyright © 2024 All Rights Reserved</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12?fbclid=IwY2xjawGC9PhleHRuA2FlbQIxMAABHfRchzSQPPoVgCk_XfXawHTdzt9EJ40IaktUW0FH9aNFrMvu-O2dT7TV8Q_aem_dBhOrH8VbG2aC6HeTXdRtQ"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="./script/script.js"></script>
+  <script>
+    AOS.init();
+    var type = new Typed(".auto-type", {
+      strings: ["Welcome to", "My channel"],
+      typeSpeed: 130,
+      backSpeed: 100,
+      loop: true,
+    });
+  </script>
+</html>
